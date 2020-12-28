@@ -17,15 +17,7 @@ Run
 ---
 
 ```bash
-docker run -d --rm \
-  --network docker_network \
-  --name kafka \
-  --env ADVERTISED_HOST=localhost \
-  --env ADVERTISED_PORT=9092 \
-  --env TOPICS=my-topic_1,my-topic_2 \
-  -p 2181:2181 \
-  -p 9092:9092 \
-  danielklossek/kafka
+docker run -d --rm --network docker_network --name kafka --env ADVERTISED_HOST=localhost --env ADVERTISED_PORT=9092 --env TOPICS=my-topic_1,my-topic_2 -p 2181:2181 -p 9092:9092 danielklossek/kafka-zookeeper
 ```
 
 ```bash
